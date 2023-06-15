@@ -1,0 +1,22 @@
+# 应用服务 WEB 访问端口
+server:
+  port: 8080
+
+mybatis-plus:
+  mapper-locations: classpath:mapper/*.xml
+  configuration:
+    map-underscore-to-camel-case: true
+
+spring:
+  datasource:
+    primary:
+      jdbc-url: jdbc:mysql://localhost:3306/ec_offer?allowMultiQueries=true&serverTimezone=GMT&characterEncoding=utf8
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      username: root
+      password: root
+    standby:
+      jdbc-url: jdbc:mysql://localhost:3306/ec_offer_2?allowMultiQueries=true&serverTimezone=GMT&characterEncoding=utf8
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      username: root
+      password: root
+

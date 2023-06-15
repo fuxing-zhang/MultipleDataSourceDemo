@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zfx.multipleDataSourceDemo.web.mapper.BankMapper">
+    <select id="queryById" resultType="com.zfx.multipleDataSourceDemo.web.entity.Bank">
+        select * from ec_bank where bank_id = #{bankId}
+    </select>
+</mapper>
